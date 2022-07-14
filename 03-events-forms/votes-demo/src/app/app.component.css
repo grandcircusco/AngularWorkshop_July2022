@@ -8,3 +8,13 @@ section {
 button {
   margin-right: .5em;
 }
+
+.candidate {
+  margin-bottom: .5em;
+}
+
+.bar {
+  height: 1em;
+  border-radius: .2em;
+  border: 1px solid silver;
+}

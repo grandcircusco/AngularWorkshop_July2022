@@ -8,3 +8,11 @@
     <button type="button" (click)="count = 0">Reset</button>
   </p>
 </section>
+
+<section>
+  <h2>Vote Tally</h2>
+  <div class="candidate" *ngFor="let candidate of candidates">
+    {{ candidate.name }}: {{ candidate.votes }}
+    <div class="bar" [ngStyle]="{ backgroundColor: candidate.color, width: candidate.votes * 20 + 'px' }"></div>
+  </div>
+</section>
