@@ -16,3 +16,9 @@
     <div class="bar" [ngStyle]="{ backgroundColor: candidate.color, width: candidate.votes * 20 + 'px' }"></div>
   </div>
 </section>
+<section>
+  <h2>Vote</h2>
+  <p>
+    <button *ngFor="let candidate of candidates">Vote for {{ candidate.name }}</button>
+  </p>
+</section>
