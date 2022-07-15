@@ -15,6 +15,12 @@ export class AppComponent {
     { name: "Strawberry", color: "LightPink", votes: 0 }
   ];
 
+  formCandidate: Candidate = {
+    name: "",
+    color: "",
+    votes: 0
+  };
+
   // add methods to modify the data
   countUp(): void {
     this.count++;
@@ -31,4 +37,14 @@ export class AppComponent {
   // addVote(index: number): void {
   //   this.candidates[index].votes++;
   // }
+
+  addCandidate(): void {
+    this.candidates.push(this.formCandidate);
+    // clear the form, make a new object for next time
+    this.formCandidate = {
+      name: "",
+      color: "",
+      votes: 0
+    }
+  }
 }
