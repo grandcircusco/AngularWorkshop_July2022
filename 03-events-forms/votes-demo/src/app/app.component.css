@@ -9,6 +9,11 @@ button {
   margin-right: .5em;
 }
 
+.input-label {
+  margin-right: 1em;
+  font-weight: bold;
+}
+
 .candidate {
   margin-bottom: .5em;
 }

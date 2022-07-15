@@ -23,4 +23,12 @@ export class AppComponent {
   addCount(amount: number): void {
     this.count += amount;
   }
+
+  addVote(candidate: Candidate): void {
+    candidate.votes++;
+  }
+
+  // addVote(index: number): void {
+  //   this.candidates[index].votes++;
+  // }
 }
