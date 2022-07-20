@@ -4,9 +4,5 @@
 	<button (click)="delete()">Delete</button>
 </div>
 <div *ngIf="showEdit">
-	Hello my name is
-	<input type="text" [(ngModel)]="currentFirst" />
-	<input type="text" [(ngModel)]="currentLast" />
-	<button (click)="save()">Save</button>
-	<button (click)="cancel()">Cancel</button>
+	<app-person-form [startingValues]="fullName" (personSave)="save($event)" (formCancel)="cancel()"></app-person-form>
 </div>

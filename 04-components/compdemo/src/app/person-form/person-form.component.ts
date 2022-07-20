@@ -14,6 +14,7 @@ export class PersonFormComponent implements OnInit {
     this.currentLast = person.lastName;
   }
   @Output() personSave = new EventEmitter<Person>();
+  @Output() formCancel = new EventEmitter<void>();
 
   currentFirst: string = '';
   currentLast: string = '';
@@ -30,7 +31,7 @@ export class PersonFormComponent implements OnInit {
   }
 
   cancel(): void {
-
+    this.formCancel.emit();
   }
 
 }

@@ -17,9 +17,6 @@ export class PersonDetailComponent implements OnInit {
   };
   @Output() personDelete = new EventEmitter<void>();
 
-  currentFirst: string = '';
-  currentLast: string = '';
-
   showEdit: boolean = false;
 
   constructor() {
@@ -29,14 +26,12 @@ export class PersonDetailComponent implements OnInit {
   }
 
   edit() {
-    this.currentFirst = this.fullName.firstName;
-    this.currentLast = this.fullName.lastName;
     this.showEdit = true;
   }
 
-  save() {
-    this.fullName.firstName = this.currentFirst;
-    this.fullName.lastName = this.currentLast;
+  save(newPerson:Person) {
+    this.fullName.firstName = newPerson.firstName;
+    this.fullName.lastName = newPerson.lastName;
     this.showEdit = false;
   }
 
