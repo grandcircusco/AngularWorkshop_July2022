@@ -12,6 +12,6 @@
   </p>
   <p>
     <button type="submit">Save</button>
-    <button type="button" (click)="cancel()">Cancel</button>
+    <button type="button" (click)="cancel()" *ngIf="showCancel">Cancel</button>
   </p>
 </form>

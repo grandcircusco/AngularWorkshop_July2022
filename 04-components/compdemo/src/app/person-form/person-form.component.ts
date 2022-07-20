@@ -8,6 +8,7 @@ import { Person } from '../person';
 })
 export class PersonFormComponent implements OnInit {
 
+  @Input() showCancel = false;
   // Use a setter on the @Input to copy the starting values into the form
   @Input() set startingValues(person: Person) {
     this.currentFirst = person.firstName;
