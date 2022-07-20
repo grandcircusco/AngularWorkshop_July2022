@@ -1,0 +1,17 @@
+<form (ngSubmit)="save()">
+  <p>
+    <label
+      >First Name:
+      <input type="text" [(ngModel)]="currentFirst" name="firstName"
+    /></label>
+  </p>
+  <p>
+    <label
+      >Last Name: <input type="text" [(ngModel)]="currentLast" name="lastName"
+    /></label>
+  </p>
+  <p>
+    <button type="submit">Save</button>
+    <button type="button" (click)="cancel()">Cancel</button>
+  </p>
+</form>
