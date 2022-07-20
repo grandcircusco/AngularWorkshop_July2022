@@ -15,21 +15,13 @@ export class AllPeopleComponent implements OnInit {
     { firstName: 'Abdul', lastName: 'Amin'}
   ]
 
-  newPerson: Person = {
-    firstName: '',
-    lastName: ''
-  }
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addPerson() {
-    //let newObj = { ...this.newPerson };
-    //this.people.push(newObj);
-
-    this.people.push(this.newPerson);
+  addPerson(newPerson: Person) {
+    this.people.push(newPerson);
   }
 
   deletePerson(index: number) {

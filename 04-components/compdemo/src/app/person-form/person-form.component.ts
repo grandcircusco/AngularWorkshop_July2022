@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Person } from '../person';
 
 @Component({
@@ -13,6 +13,7 @@ export class PersonFormComponent implements OnInit {
     this.currentFirst = person.firstName;
     this.currentLast = person.lastName;
   }
+  @Output() personSave = new EventEmitter<Person>();
 
   currentFirst: string = '';
   currentLast: string = '';
@@ -23,7 +24,9 @@ export class PersonFormComponent implements OnInit {
   }
 
   save(): void {
-
+    this.personSave.emit({ firstName: this.currentFirst, lastName: this.currentLast });
+    this.currentFirst = '';
+    this.currentLast = '';
   }
 
   cancel(): void {
