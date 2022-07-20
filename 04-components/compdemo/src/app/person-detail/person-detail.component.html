@@ -1,6 +1,7 @@
 <div *ngIf="!showEdit">
 	Hello my name is {{ fullName.firstName }} {{ fullName.lastName }}
 	<button (click)="edit()">Edit</button>
+	<button (click)="delete()">Delete</button>
 </div>
 <div *ngIf="showEdit">
 	Hello my name is

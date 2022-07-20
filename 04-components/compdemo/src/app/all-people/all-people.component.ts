@@ -32,4 +32,8 @@ export class AllPeopleComponent implements OnInit {
     this.people.push(this.newPerson);
   }
 
+  deletePerson(index: number) {
+    this.people.splice(index, 1);
+  }
+
 }

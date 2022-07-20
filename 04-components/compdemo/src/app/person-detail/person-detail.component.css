@@ -1,0 +1,4 @@
+/* :root is a special way to apply CSS to the root (outermost) element of the component */
+div {
+  border: 2px solid orange;
+}

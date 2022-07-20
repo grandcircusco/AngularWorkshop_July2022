@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Person } from '../person';
 
 @Component({
@@ -15,6 +15,7 @@ export class PersonDetailComponent implements OnInit {
     firstName: '',
     lastName: ''
   };
+  @Output() personDelete = new EventEmitter<void>();
 
   currentFirst: string = '';
   currentLast: string = '';
@@ -41,6 +42,10 @@ export class PersonDetailComponent implements OnInit {
 
   cancel() {
     this.showEdit = false;
+  }
+
+  delete() {
+    this.personDelete.emit();
   }
 
 }
