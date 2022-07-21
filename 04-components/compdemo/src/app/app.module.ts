@@ -6,13 +6,17 @@ import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { AllPeopleComponent } from './all-people/all-people.component';
 import { FormsModule } from '@angular/forms';
 import { PersonFormComponent } from './person-form/person-form.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionPaneComponent } from './accordion-pane/accordion-pane.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonDetailComponent,
     AllPeopleComponent,
-    PersonFormComponent
+    PersonFormComponent,
+    AccordionComponent,
+    AccordionPaneComponent
   ],
   imports: [
     BrowserModule,

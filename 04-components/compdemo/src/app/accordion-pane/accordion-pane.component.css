@@ -1,0 +1,12 @@
+.pane {
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.body {
+  display: none;
+}
+
+.open .body {
+  display: block;
+}

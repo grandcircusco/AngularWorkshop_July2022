@@ -1,0 +1,10 @@
+<section class="accordion">
+  <h2>Accordion</h2>
+  <app-accordion-pane
+    *ngFor="let pane of panes; index as i"
+    [title]="pane.title"
+    [body]="pane.body"
+    [isOpen]="i === openPaneIndex"
+    (toggle)="togglePane(i)"
+  ></app-accordion-pane>
+</section>
