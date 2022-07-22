@@ -8,17 +8,23 @@ import { QuotesApiService } from './quotes-api.service';
 })
 export class AppComponent {
   title = 'quotes-api';
-  
-  constructor(private quotesApiService: QuotesApiService) {
 
-  }
-
-  ngOnInit(): void {
-    
-  }
-
+  // The constructor parameter shorthand below is equivalent to this...
   // private quotesApiService: QuotesApiService;
   // constructor(quotesApiService: QuotesApiService) {
   //   this.quotesApiService = quotesApiService;
   // }
+
+  constructor(private quotesApiService: QuotesApiService) {
+  }
+
+  // ngOnInit is a special method called by Angular when the component first loads.
+  ngOnInit(): void {
+    // When the API call completes, the callback function in our subscribe is called.
+    // The data from the API is passed as a parameter.
+    this.quotesApiService.fetchAllQuotes().subscribe(data => {
+      console.log(data);
+    });
+  }
+
 }
