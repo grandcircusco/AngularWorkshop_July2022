@@ -1,0 +1,6 @@
+<h2>Reddit List</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    <app-reddit-item [post]="post.data"></app-reddit-item>
+  </li>
+</ul>

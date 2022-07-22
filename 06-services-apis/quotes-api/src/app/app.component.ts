@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { QuotesApiService } from './quotes-api.service';
+import { QuotesApiService } from './services/quotes-api.service';
 import { Quote } from './interfaces/quotes-api-model';
 
 @Component({

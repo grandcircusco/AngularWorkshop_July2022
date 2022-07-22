@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Quote } from './interfaces/quotes-api-model';
+import { RedditResponse } from '../interfaces/reddit-api-model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuotesApiService {
+export class RedditApiService {
 
   // Dependency injection again to get an instance of HttpClient
   constructor(private http: HttpClient) { }
 
-  fetchAllQuotes(): Observable<Quote[]> {
-    return this.http.get<Quote[]>("https://dwolverton.github.io/juneteenth/public/api/quotes.json");
+  fetchAww(): Observable<RedditResponse> {
+    return this.http.get<RedditResponse>("https://www.reddit.com/r/aww/.json");
   }
 }
