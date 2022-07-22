@@ -18,7 +18,7 @@ export class DeckComponent implements OnInit {
   }
 
   removeFromDeck(pokemon: PokemonDetails) {
-    this.deckService.removeFromDeck(pokemon.order);
+    this.deckService.removeFromDeck(pokemon.id);
   }
 
 }

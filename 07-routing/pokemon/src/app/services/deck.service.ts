@@ -16,12 +16,12 @@ export class DeckService {
     this.deck.push(pokemon);
   }
   removeFromDeck(id: number): void {
-    const index = this.deck.findIndex((poke) => poke.order === id);
+    const index = this.deck.findIndex((poke) => poke.id === id);
     if (index !== -1) {
       this.deck.splice(index, 1);
     }
   }
   isInDeck(id: number): boolean {
-    return this.deck.some((poke) => poke.order === id);
+    return this.deck.some((poke) => poke.id === id);
   }
 }

@@ -4,5 +4,11 @@
     <button (click)="addToDeck()">Add to Deck</button>
   </p>
   <img src="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
+  <p>
+    Species: {{pokemon.species.name}}
+  </p>
+  <p>
+    Types: <span *ngFor="let type of pokemon.types; last as last">{{type.type.name}}{{!last ? ', ' : ''}}</span>
+  </p>
 </div>
 <div *ngIf="!pokemon">Loading...</div>
