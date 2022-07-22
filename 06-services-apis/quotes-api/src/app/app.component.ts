@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { QuotesApiService } from './quotes-api.service';
+import { Quote } from './interfaces/quotes-api-model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { QuotesApiService } from './quotes-api.service';
 })
 export class AppComponent {
   title = 'quotes-api';
+  quotes: Quote[] = [];
 
   // The constructor parameter shorthand below is equivalent to this...
   // private quotesApiService: QuotesApiService;
@@ -23,7 +25,7 @@ export class AppComponent {
     // When the API call completes, the callback function in our subscribe is called.
     // The data from the API is passed as a parameter.
     this.quotesApiService.fetchAllQuotes().subscribe(data => {
-      console.log(data);
+      this.quotes = data;
     });
   }
 

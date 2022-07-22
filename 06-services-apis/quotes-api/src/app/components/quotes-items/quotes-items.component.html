@@ -1,0 +1,15 @@
+<div>
+    <div *ngIf="quoteItem.photo === null">
+        No Image Provided
+    </div>
+    <div *ngIf="quoteItem.photo != null">
+        <img src="https://dwolverton.github.io/juneteenth/public/{{quoteItem.photo}}">
+    </div>
+
+    <p>{{quoteItem.text}}</p>
+    <p>{{quoteItem.source}}</p>
+    <p>{{quoteItem.sourceTagline}}</p>
+    <p>{{quoteItem.details}}</p>
+    <p>{{quoteItem.date.year}} {{quoteItem.date.exact}}</p>
+</div>
+
