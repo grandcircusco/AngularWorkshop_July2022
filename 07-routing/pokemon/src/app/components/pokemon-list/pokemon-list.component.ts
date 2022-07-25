@@ -15,6 +15,9 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonApiService.fetchAllPokemon().subscribe(data => {
+      // Because the Pokemon API does not include the "id" directly as
+      // a property, here we transform the results to include the "id", which
+      // is extracted from the Pokemon's "url".
       this.results = data.results.map(pokemonResultToListItem);
     });
   }

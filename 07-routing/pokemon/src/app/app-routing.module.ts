@@ -7,10 +7,12 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 
 const routes: Routes = [
   { path: "deck", component: DeckComponent },
+  // :id is a variable in the URL which can have different values
   { path: "details/:id", component: PokemonDetailsComponent },
+  // without pathMatch: full, this would match anything starting with details/
   { path: "details", pathMatch: "full", redirectTo: "/" },
-  { path: "", component: PokemonListComponent },
-  { path: "**", component: NotFoundComponent }
+  { path: "", component: PokemonListComponent }, // the root path (homepage)
+  { path: "**", component: NotFoundComponent } // ** wildcard catches all
 ];
 
 @NgModule({
