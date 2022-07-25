@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { DeckComponent } from './components/deck/deck.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
     PokemonDetailsComponent,
-    DeckComponent
+    DeckComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

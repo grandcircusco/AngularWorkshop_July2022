@@ -5,6 +5,12 @@ nav ul {
   gap: .5em;
 }
 
-nav li {
+a {
+  color: blue;
+}
 
+a.active {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
