@@ -15,7 +15,7 @@ export class RedditListComponent implements OnInit {
 
   ngOnInit(): void {
     this.redditApiService.fetchAww().subscribe(data => {
-      this.posts = data.data.children;
+      this.posts = data.data.children.slice(0, 10);
     });
   }
 
