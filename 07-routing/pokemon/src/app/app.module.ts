@@ -10,6 +10,7 @@ import { DeckComponent } from './components/deck/deck.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

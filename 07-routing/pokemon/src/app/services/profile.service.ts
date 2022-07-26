@@ -9,6 +9,7 @@ export class ProfileService {
 
   private _profile = new BehaviorSubject<Profile>({
     name: "Anonymous",
+    email: "",
     birthYear: 1996
   });
   readonly profile = this._profile.asObservable();

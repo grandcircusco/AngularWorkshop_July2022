@@ -9,7 +9,7 @@ import { ProfileService } from 'src/app/services/profile.service';
 })
 export class HeaderComponent implements OnInit {
 
-  profile: Profile = { name: "", birthYear: 0 };
+  profile: Profile = { name: "", email: "", birthYear: 0 };
   pet: string | null = null;
 
   constructor(private profileService: ProfileService) { }
