@@ -8,6 +8,8 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { DeckComponent } from './components/deck/deck.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     PokemonListComponent,
     PokemonDetailsComponent,
     DeckComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
