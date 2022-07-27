@@ -12,11 +12,15 @@
     <!-- TODO: add validation -->
     <label for="email" class="form-label">Email</label>
     <input type="email" class="form-control" id="email" name="email" [(ngModel)]="values.email">
+    <!-- Email is not valid. -->
   </div>
   <div class="mb-3">
     <!-- TODO: add 2-way binding and validation -->
     <label for="birthYear" class="form-label">Birth Year</label>
     <input type="number" class="form-control" id="birthYear">
+    <!-- Birth year is required. -->
+    <!-- Birth year must not be before 1900. -->
+    <!-- Birth year must not be in the future. -->
   </div>
   <div class="mb-3">
     <button type="submit" class="btn btn-primary">Save</button>
