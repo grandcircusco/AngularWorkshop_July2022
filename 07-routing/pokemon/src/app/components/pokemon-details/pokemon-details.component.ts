@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PokemonDetails } from 'src/app/interfaces/pokemon-api-model';
+import { PokemonDetails } from 'src/app/interfaces/pokemon-model';
 import { DeckService } from 'src/app/services/deck.service';
 import { PokemonApiService } from 'src/app/services/pokemon-api.service';
 

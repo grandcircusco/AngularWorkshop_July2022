@@ -2,8 +2,9 @@
 <ul>
   <li *ngFor="let pokemon of deck">
     <a [routerLink]="['/details', pokemon.id]">
-      <img [src]="pokemon.sprites.front_default" alt="">
+      <img [src]="pokemon.sprites.defaultFront" alt="">
       {{ pokemon.name }}</a>
-    <button (click)="removeFromDeck(pokemon)">Remove</button>
+    <button class="btn btn-primary me-2" (click)="setPet(pokemon)">Set Pet</button>
+    <button class="btn btn-secondary" (click)="removeFromDeck(pokemon)">Remove</button>
   </li>
 </ul>

@@ -1,16 +1,4 @@
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  gap: .5em;
-}
-
-a {
-  color: blue;
-}
-
-a.active {
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
+.container {
+  background-color: white;
+  min-height: 100vh;
 }
