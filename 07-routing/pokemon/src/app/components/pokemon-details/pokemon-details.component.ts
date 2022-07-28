@@ -10,7 +10,8 @@ import { PokemonApiService } from 'src/app/services/pokemon-api.service';
   styleUrls: ['./pokemon-details.component.css'],
 })
 export class PokemonDetailsComponent implements OnInit {
-  pokemon?: PokemonDetails;
+  pokemon: PokemonDetails | null = null;
+  loading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +25,7 @@ export class PokemonDetailsComponent implements OnInit {
         .fetchPokemonById(parseInt(params['id']))
         .subscribe((data) => {
           this.pokemon = data;
+          this.loading = false;
         });
     });
   }

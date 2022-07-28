@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 import {
   pokemonApiResultToListItem,
   PokemonApiDetails,
@@ -21,10 +21,19 @@ export class PokemonApiService {
       .pipe(map((data) => data.results.map(pokemonApiResultToListItem)));
   }
 
-  fetchPokemonById(id: number): Observable<PokemonDetails> {
+  fetchPokemonById(id: number): Observable<PokemonDetails | null> {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
     return this.http
       .get<PokemonApiDetails>(url)
-      .pipe(map(pokemonApiDetailsToPokemonDetails));
+      .pipe(
+        map(pokemonApiDetailsToPokemonDetails),
+        catchError(err => {
+          if (err.status !== 404) {
+            console.error(err);
+          }
+          // if there is an error, return an Observable of null
+          return of(null);
+        })
+      );
   }
 }

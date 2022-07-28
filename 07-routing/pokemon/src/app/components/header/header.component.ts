@@ -15,8 +15,10 @@ export class HeaderComponent implements OnInit {
   constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
-    this.profile = this.profileService.getProfile();
-    this.pet = this.profileService.getPet();
+    // this.profile = this.profileService.getProfile();
+    // this.pet = this.profileService.getPet();
+    this.profileService.profile.subscribe(newProfile => this.profile = newProfile);
+    this.profileService.pet.subscribe(newPet => this.pet = newPet);
   }
 
 }
