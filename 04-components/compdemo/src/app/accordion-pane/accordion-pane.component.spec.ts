@@ -22,4 +22,17 @@ describe('AccordionPaneComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('.handleToggle', () => {
+    it('should call toggle.emit()', () => {
+      // Arrange
+      let toggleSpy = spyOn(component.toggle, 'emit');
+
+      // Act
+      component.handleToggle();
+
+      // Assert
+      expect(toggleSpy).toHaveBeenCalled();
+    })
+  });
 });

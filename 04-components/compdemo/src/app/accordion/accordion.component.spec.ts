@@ -19,7 +19,29 @@ describe('AccordionComponent', () => {
     fixture.detectChanges();
   });
 
+  beforeEach(() => {
+    component.openPaneIndex = 1;
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('.togglePane', () => {
+    it('should set openPanelIndex to null when index input equals openPanelIndex', () => {
+      // Act
+      component.togglePane(1);
+
+      // Assert
+      expect(component.openPaneIndex).toBeNull();
+    });
+
+    it('should set openPanelIndex to index input when they are not equal', () => {
+      // Act
+      component.togglePane(2);
+
+      // Assert
+      expect(component.openPaneIndex).toEqual(2);
+    });
   });
 });
