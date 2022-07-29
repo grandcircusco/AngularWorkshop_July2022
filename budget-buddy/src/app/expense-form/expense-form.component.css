@@ -1,0 +1,10 @@
+.form-input label {
+  margin-right: .5em;
+  font-weight: bold;
+}
+.form-input {
+  margin-bottom: .5em;
+}
+.alert {
+  color: crimson;
+}
