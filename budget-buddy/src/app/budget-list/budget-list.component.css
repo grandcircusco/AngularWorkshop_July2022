@@ -1,0 +1,11 @@
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid silver;
+  padding: 3px 1em;
+  text-align: left;
+}
+th:nth-child(3), td:nth-child(3) {
+  text-align: right;
+}

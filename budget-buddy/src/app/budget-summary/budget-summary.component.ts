@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BudgetService } from '../budget.service';
+import { BudgetService } from '../services/budget.service';
 
 @Component({
   selector: 'app-budget-summary',
@@ -17,7 +17,6 @@ export class BudgetSummaryComponent implements OnInit {
   ngOnInit(): void {
     this.budgetService.total.subscribe(newTotal => this.updateTotal(newTotal));
     this.budgetService.total.subscribe(this.updateTotal.bind(this));
-    this.budgetService.addExpense({description: "Hi", amount:200, category: "Bills"})
   }
 
   updateTotal(newTotal: number) {

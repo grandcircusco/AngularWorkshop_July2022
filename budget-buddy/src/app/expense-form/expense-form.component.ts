@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { BudgetService } from '../budget.service';
+import { BudgetService } from '../services/budget.service';
 import { Expense } from '../interfaces/expense';
 
 @Component({
