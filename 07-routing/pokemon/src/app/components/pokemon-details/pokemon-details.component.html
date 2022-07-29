@@ -11,4 +11,8 @@
     Types: <span *ngFor="let type of pokemon.types; last as last">{{type}}{{!last ? ', ' : ''}}</span>
   </p>
 </div>
-<div *ngIf="!pokemon">Loading...</div>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="!pokemon && !loading">
+  <h2>Pokemon Not Found</h2>
+  <p>Return to the <a routerLink="/">homepage</a>.</p>
+</div>
